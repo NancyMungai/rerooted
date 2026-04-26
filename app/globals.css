@@ -1,50 +1,94 @@
 @import "tailwindcss";
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-:root {
-  --green-dark: #1E3320;
-  --green-deeper: #162918;
-  --green-mid: #2d4a30;
-  --yellow: #D4E84A;
-  --amber: #F2A63A;
-  --cream: #f0ead0;
-  --muted: #5a7a5e;
-  --soft: #a8c49a;
-  --bolt-blue: #1a56db;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--green-dark);
-  color: var(--cream);
-  font-family: sans-serif;
+  background-color: #F5F7F2;
+  color: #1A1A1A;
+  font-family: system-ui, -apple-system, sans-serif;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-input, textarea {
-  outline: none;
+textarea,
+input,
+button {
+  font-family: inherit;
 }
 
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
+*:focus-visible {
+  outline: 2px solid #00C853;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-.pulse-dot {
-  animation: pulse-dot 0.8s ease-in-out infinite;
-  color: var(--yellow);
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
 }
 
-@keyframes skeleton-shimmer {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.9; }
+.skeleton-pulse {
+  animation: pulse 1.2s ease-in-out infinite;
 }
 
-.skeleton-block {
-  animation: skeleton-shimmer 1.6s ease-in-out infinite;
-  background: var(--green-mid) !important;
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.suggestion-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .suggestion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hero-section {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main-card {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  width: calc(100% - 32px);
+  max-width: 1000px;
+  margin: -50px auto 60px;
+}
+
+@media (min-width: 600px) {
+  .main-card {
+    width: calc(100% - 80px);
+  }
+}
+
+.page-textarea::placeholder {
+  color: #9aaa98;
 }
