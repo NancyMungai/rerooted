@@ -14,7 +14,10 @@ export default function LandingPage() {
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        padding: 'clamp(24px, 5vw, 48px)',
+        paddingTop: 'max(clamp(24px, 5vw, 48px), env(safe-area-inset-top))',
+        paddingBottom: 'max(clamp(24px, 5vw, 48px), env(safe-area-inset-bottom))',
+        paddingLeft: 'max(clamp(24px, 5vw, 48px), env(safe-area-inset-left))',
+        paddingRight: 'max(clamp(24px, 5vw, 48px), env(safe-area-inset-right))',
         overflow: 'hidden',
       }}
     >

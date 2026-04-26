@@ -9,10 +9,12 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 body {
   overflow-x: hidden;
+  overscroll-behavior: none;
   background-color: #F5F7F2;
   color: #1A1A1A;
   font-family: system-ui, -apple-system, sans-serif;
