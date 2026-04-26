@@ -78,7 +78,7 @@ export default function ShoppingPage() {
           padding: '0 0 72px',
         }}
       >
-        <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 40px', width: '100%' }}>
+        <div className="hero-content">
           <h1 style={{ fontSize: 'clamp(28px, 5vw, 42px)', fontWeight: 800, color: '#ffffff', lineHeight: 1.1 }}>
             plan your week.
           </h1>

@@ -51,7 +51,7 @@ export default function Nav() {
               flex: 1,
               textAlign: 'center',
               padding: '10px 8px',
-              fontSize: 15,
+              fontSize: 'clamp(11px, 3.5vw, 15px)',
               fontWeight: 600,
               color: l.href === pathname ? '#1A1A1A' : '#6B7B69',
               backgroundColor: l.href === pathname ? '#D4E84A' : 'transparent',

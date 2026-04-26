@@ -69,7 +69,7 @@ export default function SkipPage() {
           padding: '0 0 72px',
         }}
       >
-        <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 40px', width: '100%' }}>
+        <div className="hero-content">
           <h1 style={{ fontSize: 'clamp(28px, 5vw, 42px)', fontWeight: 800, color: '#ffffff', lineHeight: 1.1 }}>
             support local tonight.
           </h1>
@@ -127,7 +127,7 @@ export default function SkipPage() {
         {!result && !loading && (
           <div style={{ marginTop: 20 }}>
             <p style={{ fontSize: 13, fontWeight: 600, color: '#6B7B69', marginBottom: 10 }}>
-              what were you craving?
+              what are you craving?
             </p>
             <div className="suggestion-grid">
               {SUGGESTIONS.map(s => (
