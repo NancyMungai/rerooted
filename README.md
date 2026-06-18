@@ -25,7 +25,6 @@ solve the last-mile problem: you have the food, you just need the idea.
 - **Next.js** (App Router)
 - **TypeScript**
 - **Tailwind CSS**
-- **Bolt Marketplace API**
 - Deployed on **Vercel**
 
 ## Getting started
